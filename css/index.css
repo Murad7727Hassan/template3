@@ -64,7 +64,8 @@ body
     justify-content: space-between;
     align-items: center;
 }
-.header .container ul
+.header .container ul,
+.support .container div:nth-child(2) ul
 {
     list-style: none;
     font-size: 14px;
@@ -153,14 +154,20 @@ body
     justify-content: space-between;
     align-items: center;
 }
-.intro  .container .logo .text
+
+.intro  .container .logo .text,
+.support .container div .logo
 {
     color: #fff;
     position: relative;
     padding-left: 45px;
 }
-
-.intro  .container .logo .text i
+.container .logo .text h3
+{
+    font-size: 20px;
+}
+.intro  .container .logo .text i,
+.support .container div .logo i
 {
     position: absolute;
     left: 0;
@@ -411,7 +418,7 @@ body
 }
 .services .intro-services
 {
-    max-width: 480px;
+    max-width: 599px;
     padding: 60px 25px;
     background-color: var(--button-color);
 }
@@ -429,7 +436,7 @@ body
     background-image: url(../image/image-main.png);
     background-size: cover;
 }
-@media  (max-width:480px) {
+@media  (max-width:599px) {
     .services
     {
         display: block;
@@ -451,23 +458,27 @@ body
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     } 
 }
-.services .container .content .service
+.services .container .content .service,
+.support .container div:first-child .service
 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.services .container .content .service i
+.services .container .content .service i,
+.support .container div:first-child .service i
 {
     font-size: 50px;
     padding-right: 30px;
     color: var(--button-color);
 }
-.services .container .content .service .text
+.services .container .content .service .text,
+.support .container div:first-child .service .text h4
 {
     width: 50%;
 }
-.services .container .content .service .text h4
+.services .container .content .service .text h4,
+.support .container div:first-child .service.text h4
 {
      padding:20px 0;
 }
@@ -503,7 +514,7 @@ body
 }
 .visa .visa-cover .container div:not(:nth-child(4))
 {
-    min-width: calc(1120px/3);
+    width: calc(1120px/3);
     padding: 10px 20px;
 }
 
@@ -516,27 +527,7 @@ body
 {
     width: 373px;
 }
-@media (max-width:987px)
-{
-    .visa .visa-cover  h3
-{
-    font-size: 25px;
-}
-.visa .visa-cover .container div ,
-.visa .visa-cover .container div:nth-child(4)
-{
-    max-width: 373px;
-    padding: 10px 20px;
-}
-.visa .visa-cover .container div:nth-child(5) h4
-{
-    transform: translate(-18px,0px);
-}
-.visa .visa-cover .container div:nth-child(6)
-{
-    display: none;
-}
-}
+
 .visa .visa-cover .container div:nth-child(5) h4
 {
     background: var(--button-color);
@@ -561,6 +552,36 @@ body
     margin-top: 80px;
     color: white;
     font-size: 25px
+}
+@media (max-width:987px)
+{
+    .visa .visa-cover  h3
+{
+    font-size: 25px;
+}
+.visa .visa-cover .container div:nth-child(4)
+{
+    width: calc(1120px/3);
+}
+.visa .visa-cover .container div 
+{
+    padding: 10px 20px;
+    max-width: 987px;
+    background-color: white;
+}
+.visa .visa-cover .container div:nth-child(5) .get
+{
+    width: 100%;
+}
+.visa .visa-cover .container div:nth-child(5) h4
+{
+    transform: none;
+}
+.visa .visa-cover .container div:nth-child(6)
+{
+    display: none;
+}
+ 
 }
 .visa .visa-cover .container div:nth-child(6) h5 i
 {
@@ -589,3 +610,133 @@ body
     border-radius: var(--border-radios);
 }
 /* end visa */
+/* strat support */
+.support
+{
+    background-color: var(--main-color);
+    color: white;
+}
+.support h5
+{
+    font-size: 15px;
+    padding: 30px 0;
+}
+.support p{
+    font-size: 10px;
+}
+.support .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(265px,1fr));
+    grid-gap: 20px ;
+}
+.support .container div 
+{
+    margin: 20px;
+}
+.support .container div:first-child .logo i
+{
+    font-size: 30px;
+}
+.support .container div:first-child .service h3
+{
+    font-size: 15px;
+}
+.support .container div:first-child .logo .text p,
+.support .container div:first-child p,
+.support .container div:first-child .service p
+{
+    font-size: 10px;
+}
+.support .container div:first-child .service i
+{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.support .container div:first-child .service .text h4
+{
+    width: 100%;
+}
+ 
+.support .container div:nth-child(2) ul li
+{
+    padding: 10px;
+}
+.support .container div:nth-child(2) ul li i
+{
+    padding-right: 5px;
+}
+.support .container div:nth-child(3) .img-row
+{
+    display: flex;
+    margin: 0;
+}
+
+.support .container div:nth-child(3) .img-row img
+{
+    width: 30%;
+    height: 30%;
+}
+.support .container div:nth-child(3) .img-row  .text
+{
+    margin: 0;
+    padding: 5px 0 35px 15px;
+}
+.support .container div:nth-child(3) .img-row  .text p:nth-child(2)
+{
+    padding-top: 5px;
+    color: var(--button-color);
+}
+.support .container div:nth-child(3) .img-row  .text p:nth-child(2) i
+{
+    padding-right: 5px;
+}
+.support .container div:nth-child(3) hr
+{
+    margin-bottom: 20px;
+    border: 1px solid #1a214e;
+}
+.support .container div:last-child form
+{
+   position: relative;
+   font-size: 12px;
+   padding: 30px 0;
+}
+.support .container div:last-child form input
+{
+    width: 100%;
+    height: 100%;
+    padding: 5px 120px 5px 20px;
+    background-color: #1a214e;
+    outline: 1px solid #ff000000;
+    border: 1px solid #041155;
+    border-radius: 5px 0px 0px 5px;
+}
+.support .container div:last-child form input::placeholder
+{
+    color: white;
+}
+.support .container div:last-child form button
+{
+    position: absolute;
+    right: 0;
+    padding: 5px 20px;
+    background-color: var(--button-color);
+    color: white;
+    border: 1px solid var(--button-color);
+    outline: 1px solid #ff000000;
+    border-radius: 0px 5px 5px 0px;
+}
+/* end support  */
+/* start footer  */
+footer
+{
+    background-color: #030933;
+    color: white;
+}
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+}
+/* end footer  */
